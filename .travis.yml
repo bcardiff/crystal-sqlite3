@@ -1,2 +1,77 @@
 language: crystal
 sudo: false
+jobs:
+  include:
+    - os: linux
+      dist: bionic
+      crystal: latest
+    - os: linux
+      dist: bionic
+      crystal: nightly
+    - os: linux
+      dist: bionic
+      crystal: stable
+    - os: linux
+      dist: bionic
+      crystal: 0.34.0
+    - os: linux
+      dist: bionic
+      crystal: 0.35.0
+
+    - os: linux
+      dist: xenial
+      crystal: stable/0.35
+    - os: linux
+      dist: xenial
+      crystal: stable/0.42
+    - os: linux
+      dist: xenial
+      crystal: nightly/1.0.0
+    - os: linux
+      dist: xenial
+      crystal: nightly/1.0.0-dev
+    - os: linux
+      dist: xenial
+      crystal: nightly/invalid
+    - os: linux
+      dist: xenial
+      crystal: invalid
+
+    - os: linux
+      dist: xenial
+      crystal: latest
+    - os: linux
+      dist: xenial
+      crystal: nightly
+    - os: linux
+      dist: xenial
+      crystal: stable
+    - os: linux
+      dist: xenial
+      crystal: 0.34.0
+    - os: linux
+      dist: xenial
+      crystal: 0.35.0
+
+    - os: linux
+      dist: trusty
+      crystal: latest
+    - os: linux
+      dist: trusty
+      crystal: nightly
+    - os: linux
+      dist: trusty
+      crystal: stable
+    - os: linux
+      dist: trusty
+      crystal: 0.34.0
+    - os: linux
+      dist: trusty
+      crystal: 0.35.0
+
+    - os: osx
+      crystal: latest
+    - os: osx
+      crystal: nightly
+env:
+  - SHARDS_OPTS=--ignore-crystal-version
